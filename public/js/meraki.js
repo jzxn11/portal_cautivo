@@ -54,7 +54,15 @@ function login(){
     data.email = document.getElementById("email").value;
     alert("Hello "+data.name +"\n"+"Thanks for providing your email: "+data.email);
     console.log("Storing data to db...", data);
-
+    con.connect(function(err) {
+      if (err) throw err;
+      console.log("Connected!");
+      var sql = "INSERT INTO users (name, email) VALUES ('"+data.name+"','"+data.email+"');";
+      con.query(sql, function (err, result) {
+        if (err) throw err;
+        console.log("1 record inserted");
+      });
+    });
     // Complete Login
     authUser();
 }
