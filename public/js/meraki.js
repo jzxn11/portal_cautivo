@@ -5,6 +5,14 @@ var node_mac = GetURLParameter("node_mac");
 var client_ip = GetURLParameter("client_ip");
 var client_mac = GetURLParameter("client_mac");
 
+var mysql = require('mysql');
+var con = mysql.createConnection({
+  host: "127.0.0.1",
+  user: "root",
+  password: "telCatMiau77698*",
+  database: "captive_portal"
+});
+
 // Print Meraki provided paramaters for Debugging State
 console.log("user_continue_url: "+user_continue_url);
 console.log("client_ip: "+client_ip);
