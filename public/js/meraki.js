@@ -55,7 +55,10 @@ function login(){
     alert("Hello "+data.name +"\n"+"Thanks for providing your email: "+data.email);
     console.log("Storing data to db...", data);
     var sql = "INSERT INTO users (name, email) VALUES ('"+data.name+"','"+data.email+"');";
-    con.query(sql);
+    con.query(sql, function (err, result) {
+      if (err) throw err;
+      console.log("1 record inserted");
+    });
     // Complete Login
     authUser();
   
