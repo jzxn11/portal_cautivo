@@ -4,14 +4,6 @@ var user_continue_url = decodeURIComponent(GetURLParameter("user_continue_url"))
 var node_mac = GetURLParameter("node_mac");
 var client_ip = GetURLParameter("client_ip");
 var client_mac = GetURLParameter("client_mac");
-var mysql = require('mysql');
-
-var con = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "telCatMiau77698*",
-  database: "captive_portal"
-});
 
 // Print Meraki provided paramaters for Debugging State
 console.log("user_continue_url: "+user_continue_url);
@@ -53,15 +45,10 @@ function login(){
     data.name = document.getElementById("name").value;
     data.email = document.getElementById("email").value;
     alert("Hello "+data.name +"\n"+"Thanks for providing your email: "+data.email);
-  //  console.log("Storing data to db...", data);
-  //  var sql = "INSERT INTO users (name, email) VALUES ('"+data.name+"','"+data.email+"');";
-  //  con.query(sql, function (err, result) {
-   //   if (err) throw err;
-    //  console.log("1 record inserted");
- //   });
+    console.log("Storing data to db...", data);
+
     // Complete Login
     authUser();
-  
 }
 
 // Helper function to parse URL
