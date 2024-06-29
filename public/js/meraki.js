@@ -5,7 +5,7 @@ var node_mac = GetURLParameter("node_mac");
 var client_ip = GetURLParameter("client_ip");
 var client_mac = GetURLParameter("client_mac");
 
-var mysql = require('mysql');
+var mysql = require("mysql");
 var con = mysql.createConnection({
   host: "127.0.0.1",
   user: "root",
