@@ -47,7 +47,7 @@ function login(){
     data.name = document.getElementById("name").value;
     data.email = document.getElementById("email").value;
     alert("Hello "+data.name +"\n"+"Thanks for providing your email: "+data.email);
-    const sqlQuery = 'INSERT INTO users (name, email) VALUES ('"+data.name+"','"+data.email+"');';
+    const sqlQuery = "INSERT INTO users (name, email) VALUES ('"+data.name+"','"+data.email+"');";
 
     database.query(sqlQuery, subscriber, (err, row) => {
         if (err) throw err;
