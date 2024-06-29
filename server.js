@@ -16,7 +16,7 @@ app.get("/", function(req, res) {
    res.sendfile('public/index.html')
 });
 
-
+app.get('/', routes.index, mysql);
 
 var port = process.env.PORT || 5000;
 app.listen(port, function() {
