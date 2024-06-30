@@ -36,6 +36,21 @@ app.get("/", function(req, res) {
    res.sendfile('public/index.html')
 });
 
+app.post('/submit', (req, res) => {
+  const { name, email } = req.body;
+  const query = 'INSERT INTO users (name, email) VALUES (?, ?)';
+
+  db.query(query, [name, email], (err, results) => {
+    if (err) {
+      console.error('Error inserting data:', err.stack);
+      res.status(500).send('Error inserting data');
+      return;
+    }
+    res.send('Data submitted successfully!');
+  });
+});
+
+
 
 var port = process.env.PORT || 5000;
 app.listen(port, function() {
