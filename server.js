@@ -38,7 +38,7 @@ app.get("/", function(req, res) {
 
 app.post('/submit', (req, res) => {
   const { name, email } = req.body;
-  const query = 'INSERT INTO users (name, email) VALUES (?, ?)';
+  const query = 'INSERT INTO users (data.name, data.email) VALUES (?, ?)';
 
   db.query(query, [name, email], (err, results) => {
     if (err) {
