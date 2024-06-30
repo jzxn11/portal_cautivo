@@ -15,7 +15,8 @@ const db = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: 'telCatMiau77698*',
-  database: 'captive_portal'
+  database: 'captive_portal',
+  port: 3306
 });
 db.connect((err) => {
   if (err) throw err;
