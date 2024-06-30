@@ -47,9 +47,6 @@ function login(){
     alert("Hello "+data.name +"\n"+"Thanks for providing your email: "+data.email);
     console.log("Storing data to db...", data);
 
-    // Complete Login
-    authUser();
-
     //Send data
   fetch('http://localhost:3000/submit', {
     method: 'POST',
@@ -65,6 +62,10 @@ function login(){
   .catch(error => {
     console.error('Error:', error);
   });
+
+    // Complete Login
+    authUser();
+
 }
 
 // Helper function to parse URL
