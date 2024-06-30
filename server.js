@@ -36,7 +36,7 @@ app.post('/submit', (req, res) => {
   const name = req.body.name;
   const email = req.body.email;
 
-  const query = 'INSERT INTO usuarios (nombre, correo) VALUES (?, ?)';
+  const query = 'INSERT INTO usuarios (name, email) VALUES (?, ?)';
   db.query(query, [name, email], (err, result) => {
     if (err) throw err;
     res.send('Datos recibidos e insertados en la base de datos.');
