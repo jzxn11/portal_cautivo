@@ -28,6 +28,7 @@ db.connect(err => {
     return;
   }
   console.log('Connected to database.');
+  res.send('conectado');
 });
 
 /* serves main page */
