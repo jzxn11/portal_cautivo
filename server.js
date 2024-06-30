@@ -5,6 +5,9 @@ var app = express();
 
 // Express Midleware  - BodyParser
 var bodyParser = require('body-parser');
+
+const mysql = require('mysql2');
+
 app.use(bodyParser.json()); // support json encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
