@@ -9,9 +9,9 @@ app.use(bodyParser.json()); // support json encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
 // Database
-const mysql = require('mysql');
-const path = require('path');
-const db = mysql.createConnection({
+var mysql = require('mysql');
+var path = require('path');
+var db = mysql.createConnection({
   host: '127.0.0.1',
   user: 'root',
   password: 'telCatMiau77698*',
