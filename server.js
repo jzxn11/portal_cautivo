@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 const mysql = require('mysql');
 const path = require('path');
 const db = mysql.createConnection({
-  host: 'localhost',
+  host: '127.0.0.1',
   user: 'root',
   password: 'telCatMiau77698*',
   database: 'captive_portal',
