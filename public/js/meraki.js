@@ -5,7 +5,6 @@ var node_mac = GetURLParameter("node_mac");
 var client_ip = GetURLParameter("client_ip");
 var client_mac = GetURLParameter("client_mac");
 
-
 // Print Meraki provided paramaters for Debugging State
 console.log("user_continue_url: "+user_continue_url);
 console.log("client_ip: "+client_ip);
@@ -46,25 +45,10 @@ function login(){
     data.name = document.getElementById("name").value;
     data.email = document.getElementById("email").value;
     alert("Hello "+data.name +"\n"+"Thanks for providing your email: "+data.email);
+    console.log("Storing data to db...", data);
+
     // Complete Login
     authUser();
-
-    fetch('/submit', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({data.name, data.email })
-        })
-        .then(response => response.text())
-        .then(data => {
-            alert('Form submitted successfully!');
-            console.log(data);
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        });
-    
 }
 
 // Helper function to parse URL
