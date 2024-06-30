@@ -17,7 +17,7 @@ app.use(express.static('public'));
 const db = mysql.createConnection({
   host: '127.0.0.1',
   user: 'root',
-  password: 'telCarMiaun77698*',
+  password: 'telCatMiau77698*',
   database: 'captive_portal'
 });
 
