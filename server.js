@@ -15,9 +15,9 @@ app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 app.use(express.static('public'));
 
 const db = mysql.createConnection({
-  host: 'your-database-host',
-  user: 'your-database-user',
-  password: 'your-database-password',
+  host: '127.0.0.1',
+  user: 'root',
+  password: 'telCarMiaun77698*',
   database: 'captive_portal'
 });
 
