@@ -48,6 +48,23 @@ function login(){
     alert("Hello "+data.name +"\n"+"Thanks for providing your email: "+data.email);
     // Complete Login
     authUser();
+
+    fetch('/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ name, email })
+        })
+        .then(response => response.text())
+        .then(data => {
+            alert('Form submitted successfully!');
+            console.log(data);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    
 }
 
 // Helper function to parse URL
