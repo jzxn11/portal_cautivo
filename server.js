@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 const mysql = require('mysql');
 const path = require('path');
 const db = mysql.createConnection({
-  host: '127.0.0.1',
+  host: 'localhost',
   user: 'root',
   password: 'telCatMiau77698*',
   database: 'captive_portal',
@@ -36,7 +36,7 @@ app.post('/submit', (req, res) => {
   const name = req.body.name;
   const email = req.body.email;
 
-  const query = 'INSERT INTO users (name, email) VALUES (?, ?)';
+  const query = "INSERT INTO users (name, email) VALUES ('"+name+"','"+email+"');";
   db.query(query, [name, email], (err, result) => {
     if (err) throw err;
     res.send('Datos recibidos e insertados en la base de datos.');
