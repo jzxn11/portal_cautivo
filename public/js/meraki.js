@@ -51,7 +51,20 @@ function login(){
     authUser();
 
     //Send data
-
+  fetch('http://localhost:3000/submit', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ name: data.name, email: data.email })
+  })
+  .then(response => response.text())
+  .then(datos => {
+    console.log(datos);
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
 }
 
 // Helper function to parse URL
