@@ -54,7 +54,7 @@ function login(){
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ name, email })
+            body: JSON.stringify({data.name, data.email })
         })
         .then(response => response.text())
         .then(data => {
