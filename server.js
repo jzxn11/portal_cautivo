@@ -14,12 +14,26 @@ app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 // serve static public site files
 app.use(express.static('public'));
 
+const db = mysql.createConnection({
+  host: 'your-database-host',
+  user: 'your-database-user',
+  password: 'your-database-password',
+  database: 'captive_portal'
+});
+
+db.connect(err => {
+  if (err) {
+    console.error('Database connection error:', err.stack);
+    return;
+  }
+  console.log('Connected to database.');
+});
+
 /* serves main page */
 app.get("/", function(req, res) {
    res.sendfile('public/index.html')
 });
 
-app.get('/', routes.index, mysql);
 
 var port = process.env.PORT || 5000;
 app.listen(port, function() {
