@@ -32,8 +32,8 @@ app.get("/", function(req, res) {
 
 // Ruta para recibir datos de meraki.js
 app.post('/submit', (req, res) => {
-  const name = req.body.data.name;
-  const email = req.body.data.email;
+  const name = req.body.name;
+  const email = req.body.email;
 
   const query = 'INSERT INTO usuarios (nombre, correo) VALUES (?, ?)';
   db.query(query, [name, email], (err, result) => {
