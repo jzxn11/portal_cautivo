@@ -21,33 +21,32 @@ LICENSE: MIT
 -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="./css/style.css">
-    </head>
-    <div class="container">  
-      
-      <form id="loginForm" action="#">
-        <center><a href="http://developers.meraki.com"><img src="./img/TELCAT.jpeg" width="70%"/></a></center>
-        <br>
-        <fieldset>
-          <input id="name" placeholder="Your name" type="text" tabindex="1" required autofocus>
-        </fieldset>
-        <fieldset>
-          <input id="email" placeholder="Your Email Address" type="email" tabindex="2" required>
-        </fieldset>
-        <fieldset>
-          <button type="submit" >Log in to WiFi</button>
-        </fieldset>
-       
-      </form>
-    </div>
-    <hr>
-    <h4>Debugging Stats</h4>
-    <p><label>Base Grant URL: </label><label id="baseGrantURL"></label></p>
-    <p><label>User Continue URL: </label><label id="userContinueURL"></label></p>
-    <p><label>Client IP: </label><label id="clientIP"></label></p>
-    <p><label>Client MAC: </label><label id="clientMAC"></label></p>
-    <p><label>Access Point MAC: </label><label id="nodeMAC"></label></p>
-        
-    <script src="./js/meraki.js"></script>
+<head>
+<link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body>
+<div class="container">  
+<form id="loginForm" action="step2.html" method="post">
+<center><a href="http://developers.meraki.com"><img src="./img/TELCAT.jpeg" width="70%"/></a></center>
+<br>
+<fieldset>
+<input id="name" name="name" placeholder="Your name" type="text" tabindex="1" required autofocus>
+</fieldset>
+<fieldset>
+<input id="email" name="email" placeholder="Your Email Address" type="email" tabindex="2" required>
+</fieldset>
+<fieldset>
+<button type="submit">Next</button>
+</fieldset>
+</form>
+</div>
+<hr>
+<h4>Debugging Stats</h4>
+<p><label>Base Grant URL: </label><label id="baseGrantURL"></label></p>
+<p><label>User Continue URL: </label><label id="userContinueURL"></label></p>
+<p><label>Client IP: </label><label id="clientIP"></label></p>
+<p><label>Client MAC: </label><label id="clientMAC"></label></p>
+<p><label>Access Point MAC: </label><label id="nodeMAC"></label></p>
+<script src="./js/meraki.js"></script>
+</body>
 </html>
