@@ -46,16 +46,17 @@ function login(){
     data.email = document.getElementById("email").value;
     data.age = document.getElementById("age").value;
     data.gender = document.getElementById("gender").value;
+    data.account = document.getElementById("account").value;
     alert("Hello "+data.name +"\n"+"Thanks for providing your email: "+data.email);
     console.log("Storing data to db...", data);
 
     //Send data
-  fetch('http://localhost:5000/submit', {
+  fetch('https://jzxn11.github.io/portal_cautivo/public/index.html/submit', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify({ name: data.name, email: data.email })
+    body: JSON.stringify({ name: data.name, email: data.email, age: data.age, gender: data.gender, account: data.account})
   })
   .then(response => response.text())
   .then(datos => {
