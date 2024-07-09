@@ -88,7 +88,7 @@ function GetURLParameter(sParam)
 
 function showNextPage() {
     document.getElementById('page1').style.display = 'none';
-    document.getElementById('loginForm').style.display = 'block';
+    document.getElementById('page2').style.display = 'block';
 }
 
 // Aquí puedes añadir cualquier otra lógica adicional para manejar el envío del segundo formulario
