@@ -51,7 +51,7 @@ function login(){
     console.log("Storing data to db...", data);
 
     //Send data
-  fetch('http://192.168.0.252:5000/submit', {
+  fetch('http://192.168.0.200:5000/submit', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
