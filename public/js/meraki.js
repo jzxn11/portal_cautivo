@@ -82,3 +82,11 @@ function GetURLParameter(sParam)
         }
     }
 }
+// meraki.js
+
+function showNextPage() {
+    document.getElementById('page1').style.display = 'none';
+    document.getElementById('page2').style.display = 'block';
+}
+
+// Aquí puedes añadir cualquier otra lógica adicional para manejar el envío del segundo formulario
