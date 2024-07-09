@@ -12,10 +12,10 @@ app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 var mysql = require('mysql');
 var path = require('path');
 var db = mysql.createConnection({
-  host: '127.0.0.1',
+  host: 'localhost',
   user: 'root',
-  password: 'telCatMiau77698*',
-  database: 'captive_portal',
+  password: 'Sup-Innova&2o24',
+  database: 'portal_cautivo',
   port: 3306
 });
 db.connect((err) => {
@@ -42,7 +42,7 @@ app.post('/submit', (req, res) => {
   const gender = req.body.gender;
   const account = req.body.account;
 
-  const query = 'INSERT INTO users2 (name, email, age, gender, account) VALUES (?, ?, ?, ?, ?)';
+  const query = 'INSERT INTO users (name, email, age, gender, account) VALUES (?, ?, ?, ?, ?)';
   db.query(query, [name, email, age, gender, account], (err, result) => {
     if (err) throw err;
     console.log('Cdatos');
