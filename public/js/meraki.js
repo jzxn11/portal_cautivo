@@ -51,7 +51,7 @@ function login(){
     console.log("Storing data to db...", data);
 
     //Send data
-  fetch('https://jzxn11.github.io/portal_cautivo/public/index.html/submit', {
+  fetch('http://localhost:5000/submit', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
