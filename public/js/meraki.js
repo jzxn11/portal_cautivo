@@ -15,7 +15,7 @@ document.getElementById("clientMAC").innerHTML = client_mac;
 document.getElementById("nodeMAC").innerHTML = node_mac;
 
 // Form Submit handler. 
-document.getElementById('loginForm').onsubmit= function(e){
+document.getElementById('loginForm1').onsubmit= function(e){
     e.preventDefault(); //prevents default form submission process to allow login and validation
     login();
 }
