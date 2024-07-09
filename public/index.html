@@ -24,10 +24,23 @@
     <div id="page2" class="container" style="display: none;">
         <form id="additionalInfoForm" action="#">
             <fieldset>
-                <input id="age" placeholder="Su edad" type="number" tabindex="3" required>
+                <input id="age" name="age" placeholder="Your Age" type="number" tabindex="1" required>
             </fieldset>
             <fieldset>
-                <input id="gender" placeholder="Su sexo" type="text" tabindex="4" required>
+                <select id="gender" name="gender" tabindex="2" required>
+                    <option value="" disabled selected>Select your Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <label for="question">Tiene una cuenta en el banco?</label>
+                <select id="question" name="question" tabindex="3" required>
+                    <option value="" disabled selected>Select your answer</option>
+                    <option value="yes">Sí</option>
+                    <option value="no">No</option>
+                </select>
             </fieldset>
             <fieldset>
                 <button type="submit">Enviar</button>
