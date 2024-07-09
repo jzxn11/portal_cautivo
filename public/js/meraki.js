@@ -45,13 +45,13 @@ function login(){
     data.name = document.getElementById("name").value;
     data.email = document.getElementById("email").value;
     data.age = document.getElementById("age").value;
-    data.gender = document.getElementById("gender").value;
-    data.account = document.getElementById("account").value;
+    data.gender = document.getElementById('gender').value;
+    data.account = document.getElementById('question').value;
     alert("Hello "+data.name +"\n"+"Thanks for providing your email: "+data.email);
     console.log("Storing data to db...", data);
 
     //Send data
-  fetch('http://localhost:5000/submit', {
+  fetch('http://192.168.0.252:5000/submit', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -93,3 +93,4 @@ function showNextPage() {
 }
 
 // Aquí puedes añadir cualquier otra lógica adicional para manejar el envío del segundo formulario
+
